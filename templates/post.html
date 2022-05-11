@@ -1,0 +1,16 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+
+<h1>{{object.title}}</h1>
+<p>{{object.description}}</p>
+<b>by -{{object.author}}</b>
+<!--<img src="{{object.img.url}}" alt="">-->
+
+<a href="{% url 'postedit' book.pk %}"> <h1>edit post</h1></a>
+<a href="{% url 'delete' book.pk %}"> <h1>delete post</h1></a>
+{% endblock content %}
+
+
+
+
